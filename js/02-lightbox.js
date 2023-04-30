@@ -22,17 +22,12 @@ function createMarkup({ preview, original, description }) {
   return itemList;
 }
 
-refs.galleryList.addEventListener("click", (e) => {
-  if (e.target.nodeName === "UL") {
-    return;
-  }
-  onClickImage(e);
-});
-
-function onClickImage(e) {
+function onClickImage() {
   const lightbox = new SimpleLightbox(".gallery a", {
     captionsData: "alt",
     captionPosition: "bottom",
     captionDelay: 250,
   });
 }
+
+onClickImage();
